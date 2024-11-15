@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        This is the original Text
+    </div>
+    <button onclick="changeText()">
+        Change text button
+    </button>
+    
+    <div class="myclass">
+        This is the first <span class="highlight">highlighted text</span>
+    </div>
+    <div class="myclass">
+        This is the second <span class="highlight">highlighted text</span>
+    </div>
+    <button onclick="highlightText()">
+        Highlight text button
+    </button>
+
+    <p>
+        This is the first paragraph
+    </p>
+    <p>This is the second paragraph</p>
+    <p>This is the third paragraph</p>
+    <button ondblclick="changeContent()">Change content</button>
+
+
+    <div class="box">First box</div>
+    
+    <div class="box">Second box</div>
+    <button onmouseover="changeBox()">change the box</button>
+    <script>
+        function changeText() {
+            const element = document.getElementById("myDiv");
+            element.textContent = "This is the new text";
+            element.style.color = "red";
+            element.style.fontSize = "30px";
+            element.style.backgroundColor = "yellow";
+        }
+
+        function highlightText() {
+            const highlights = document.getElementsByClassName("highlight");
+            highlights[0].style.color = "red";
+            highlights[0].style.backgroundColor = "yellow";
+            highlights[1].style.color = "red";
+            highlights[1].style.backgroundColor = "blue";
+        }
+
+        function changeContent() {
+            const paragraphs = document.getElementsByTagName("p");
+            paragraphs[0].textContent = "This is the new text 1";
+            paragraphs[0].style.color = "red";
+            paragraphs[0].style.fontSize = "30px";
+            paragraphs[0].style.backgroundColor = "yellow";
+
+            paragraphs[1].textContent = "This is the new text 2";
+            paragraphs[1].style.color = "green";
+            paragraphs[1].style.fontSize = "30px";
+            paragraphs[1].style.backgroundColor = "yellow";
+
+            paragraphs[2].textContent = "This is the new text 3";
+            paragraphs[2].style.color = "blue";
+            paragraphs[2].style.fontSize = "30px";
+            paragraphs[2].style.backgroundColor = "yellow";
+        }
+        function changeBox() {
+            const boxes = document.querySelector(".box");
+            boxes.style.border="2px solid red";
+            boxes.style.padding="10px";
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

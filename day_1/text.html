@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curtain Animation Without Icon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrolling when overlay is active */
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+    }
+
+    /* Styling for search icon */
+    .search-icon {
+      font-size: 60px;
+      cursor: pointer;
+      color: #007BFF;
+      position: absolute;
+      z-index: 10;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .search-icon:hover {
+      transform: scale(10.1);
+      color: #0056b3;
+    }
+
+    /* Hide icon when clicked */
+    .search-icon.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Curtain overlay */
+    .overlay {
+      position: fixed;
+      top: -100%; /* Start offscreen */
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #ff7eb3, #ff758c, #8d70ff, #74b9ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9;
+      transition: top 1.5s ease-in-out; /* Slide-down effect */
+    }
+
+    /* Show overlay */
+    .overlay.active {
+      top: 0; /* Curtain slides down */
+    }
+
+    /* Search bar in the overlay */
+    .search-bar-container {
+      text-align: center;
+      width: 80%;
+    }
+
+    .search-bar {
+      width: 60%;
+      padding: 15px;
+      font-size: 26px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      outline: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      color: #333;
+    }
+
+    .search-label {
+      font-size: 32px;
+      color: white;
+      margin-bottom: 20px;
+      display: block;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      font-style: italic;
+      font-size: 50px;
+      border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Search Icon -->
+  <i class="search-icon" id="searchIcon">&#128269;</i> <!-- Magnifying glass icon -->
+
+  <!-- Fullscreen Curtain Overlay -->
+  <div class="overlay" id="overlay">
+    <div class="search-bar-container">
+      <label for="search" class="search-label">What are you looking for?</label>
+        
+      <input type="text" id="search" class="search-bar" placeholder="Type to search..." />
+      <i class="search-icon" id="searchIcon">&#128269;</i>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for toggling the curtain overlay and hiding the icon
+    const searchIcon = document.getElementById('searchIcon');
+    const overlay = document.getElementById('overlay');
+
+    searchIcon.addEventListener('click', () => {
+      overlay.classList.add('active'); // Slide down the curtain
+      searchIcon.classList.add('hidden'); // Hide the search icon
+    });
+  </script>
+</body>
+</html>
