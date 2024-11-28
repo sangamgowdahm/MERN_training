@@ -1,0 +1,68 @@
+/* Hover effect for navigation links */
+.nav-hover {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  font-size: 1.8rem; /* More prominent font size */
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.nav-hover:hover {
+  color: #ffc107; /* Gold color on hover */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Title text styling */
+.title-text {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for visibility */
+}
+
+/* Subtitle text styling */
+.subtitle-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+}
+
+/* Button hover effect */
+.btn-hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-color: #ffc107; /* Gold color on hover */
+  color: #000000; /* Black text on hover */
+  border-color: #ffffff;
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Adjust container spacing */
+.cover-container {
+  max-width: 700px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Shadow around the content */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scale */
+}
+
+/* Hover effect for the entire page */
+.cover-container:hover {
+  transform: scale(1.05); /* Make the container slightly larger */
+}
+
+/* Optional: Apply the scaling effect to the entire page */
+body:hover {
+  transform: scale(1.02); /* Slightly enlarge the whole page */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}

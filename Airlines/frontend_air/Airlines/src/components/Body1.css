@@ -1,0 +1,89 @@
+/* Main container */
+.body1-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to scale the container */
+.body1-container:hover {
+  transform: scale(1.05);
+}
+
+/* Text container */
+.text-container {
+  max-width: 700px; /* Larger width for content */
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 2.5rem; /* Increased padding */
+  border-radius: 16px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow for visibility */
+}
+
+/* Hover effect for text container */
+.text-container:hover {
+  transform: scale(1.1);
+}
+
+/* Hero title styling */
+.hero-title {
+  font-size: 3rem; /* Larger font size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Hero text styling */
+.hero-text {
+  font-size: 1.3rem; /* Slightly larger text size */
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Common button styling */
+.btn {
+  padding: 1rem 2rem; /* Larger buttons */
+  font-size: 1.1rem; /* Slightly larger text */
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Primary button */
+.primary-btn {
+  background-color: #007bff; /* Original blue */
+  color: #ffffff;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #28a745; /* Change to green on hover */
+  color: #ffffff; /* Keep the text white */
+  transform: scale(1.1);
+}
+
+/* Secondary button */
+.secondary-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.secondary-btn:hover {
+  background-color: #ffc107; /* Change to yellow on hover */
+  color: #000000; /* Change text to black */
+  border-color: #ffc107; /* Update border to match background */
+  transform: scale(1.1);
+}

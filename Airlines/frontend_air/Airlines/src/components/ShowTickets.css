@@ -1,0 +1,91 @@
+/* Highlighted row style */
+.table-row {
+  transition: background-color 0.5s ease;
+}
+
+.table-row.highlighted {
+  background-color: #ffcccc; /* Light red background */
+}
+
+/* Gradient motion background */
+.show-tickets-container {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Gradient motion animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Table container */
+.table-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+/* Table styling */
+.table {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.btn-danger {
+  background-color: #e63946;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #d62828;
+
+}
